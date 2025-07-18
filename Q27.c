@@ -26,6 +26,16 @@ int maxDepth(struct TreeNode* root) {
     int right_Depth = maxDepth(root->right);
     return 1+(left_Depth > right_Depth ? left_Depth :right_Depth);
 }
+
+int maxDepth(struct TreeNode* root) {
+    if(root == NULL){
+        return 0;
+    }
+    int left_Depth = maxDepth(root->left);
+    int right_Depth = maxDepth(root->right);
+    return maxDepth(root->left) > maxDepth(root->right) ? 1+maxDepth(root->left) : 1+maxDepth(root->right);
+}//重复的递归计算，已经找出来root->left和root->right，但是又进行重复的计算了
+
 int main(){
     struct TreeNode* Root = BuyNewNode(1);
     Root->left = BuyNewNode(2);
