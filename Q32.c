@@ -9,14 +9,19 @@ struct TreeNode {
     struct TreeNode *right;
 };
 
-bool isSameTree(struct TreeNode* p, struct TreeNode* q) {
-    if(p == NULL && q == NULL){ //停止条件当为空树
+bool ismirrortree(struct TreeNode* p,struct TreeNode* q){
+    if(p == NULL && q == NULL){
         return true;
     }
-    if(!p || !q || p->_val != q->_val){ //判断如果两个节点有一个为空，或者两节点值不相等
+    if(!p || !q || p->val != q->val){
         return false;
     }
-    else{
-        return isSameTree(p->left,q->left) && isSameTree(p->right,q->right);
+    return ismirrortree(p->left,q->right) && ismirrortree(p->right,q->left);
+}
+
+bool isSymmetric(struct TreeNode* root) {
+    if(!root){
+        return true;
     }
+    return ismirrortree(root->left,root->right);
 }

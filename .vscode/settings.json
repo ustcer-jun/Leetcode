@@ -67,6 +67,7 @@
     "vector": "c",
     "deque": "c",
     "stdlib.h": "c",
-    "ios": "c"
+    "ios": "c",
+    "sstream": "c"
   }
 }
