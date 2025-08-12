@@ -68,6 +68,7 @@
     "deque": "c",
     "stdlib.h": "c",
     "ios": "c",
-    "sstream": "c"
+    "sstream": "c",
+    "ratio": "cpp"
   }
 }
