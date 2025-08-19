@@ -69,6 +69,10 @@
     "stdlib.h": "c",
     "ios": "c",
     "sstream": "c",
-    "ratio": "cpp"
+    "ratio": "cpp",
+    "iostream": "cpp",
+    "stack": "cpp",
+    "__node_handle": "cpp",
+    "unordered_map": "cpp"
   }
 }
